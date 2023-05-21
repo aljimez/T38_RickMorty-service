@@ -1,6 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ListCharService } from 'src/app/service/list-char.service';
 
 @Component({
   selector: 'app-personajes',
@@ -9,26 +9,15 @@ import { ListCharService } from 'src/app/service/list-char.service';
 })
 export class PersonajesComponent implements OnInit {
   charac: any = null;
-  charintercambion: any = null;
+  personajes: any = null;
 
-  constructor(private listcharService:ListCharService,private router:Router ) {}
+  constructor(private http:HttpClient,private router:Router ) {}
 
   ngOnInit():void {
-    this.listcharService
-      .retValu()
-      .subscribe(data => {
-        this.charac = data;
-        this.charintercambion = this.charac(this.charac.recurso);
-      });
+   this.http.get("https://rickandmortyapi.com/api/character").subscribe(results =>{this.charac = results; console.log(results)})
   }
 
-  charintercambio(array: any[]): any[] {
-    for (let i = array.length - 1; i > 0; i--) {
-      const element = Math.floor(Math.random() * (i + 1));
-      [array[i], array[element]] = [array[element], array[i]];
-    }
-    return array;
-  }
+
   redMre(id:number){
     this.router.navigate(['/personaje',id]);
   }

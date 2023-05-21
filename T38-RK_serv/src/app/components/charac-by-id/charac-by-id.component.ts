@@ -22,4 +22,8 @@ constructor(private route: ActivatedRoute, private charById:ListCharByIdService,
         });
       });
   }
+
+  goBack(){
+    this.router.navigate(['/personajes']);
+  }
 }

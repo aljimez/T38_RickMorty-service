@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { PersonajesComponent } from './components/personajes/personajes.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CharacByIdComponent } from './components/charac-by-id/charac-by-id.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, PersonajesComponent, HomeComponent, CharacByIdComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

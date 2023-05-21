@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class ListCharByIdService {
 id: number =0;
   constructor(private http:HttpClient) { }
+
   retrValu(){
     return this.http.get("https://rickandmortyapi.com/api/character/"+this.id)
   }
