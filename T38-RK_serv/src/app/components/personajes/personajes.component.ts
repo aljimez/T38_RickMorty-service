@@ -12,13 +12,13 @@ export class PersonajesComponent implements OnInit {
   personajes: any = null;
 
   constructor(private http:HttpClient,private router:Router ) {}
-
+//Get data while program starts
   ngOnInit():void {
-   this.http.get("https://rickandmortyapi.com/api/character").subscribe(results =>{this.charac = results; console.log(results)})
+   this.http.get("https://rickandmortyapi.com/api/character").subscribe(results =>{this.charac = results;});
   }
 
-
+//Show data by id
   redMre(id:number){
-    this.router.navigate(['/personaje',id]);
+    this.http.get("https://rickandmortyapi.com/api/character/"+id);
   }
 }

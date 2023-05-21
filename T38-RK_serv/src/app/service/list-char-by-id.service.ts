@@ -5,10 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ListCharByIdService {
-id: number =0;
+//Add HttpClientModule to access the api
   constructor(private http:HttpClient) { }
 
-  retrValu(){
-    return this.http.get("https://rickandmortyapi.com/api/character/"+this.id)
+  retrValu(id:any){
+    return this.http.get("https://rickandmortyapi.com/api/character/"+id)
   }
 }

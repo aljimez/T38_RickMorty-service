@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, PersonajesComponent, HomeComponent, CharacByIdComponent],
+  //Importing Navigation modules to obtain API data
   imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
