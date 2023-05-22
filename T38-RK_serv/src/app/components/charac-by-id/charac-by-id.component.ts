@@ -10,7 +10,7 @@ export class CharacByIdComponent implements OnInit{
 id: number =0;
 character: any = null;
 
-constructor(private route: ActivatedRoute, private charById:ListCharByIdService,private router: Router){}
+constructor( private router: Router){}
 
 //Launches while program starts
   ngOnInit():void {

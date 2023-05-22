@@ -13,7 +13,7 @@ export class PersonajesComponent implements OnInit {
   characters: any = null;
   personajes: any = null;
 
-  constructor(private http:HttpClient,private router:Router, private CharById:ListCharByIdService ) {}
+  constructor(private http:HttpClient, private CharById:ListCharByIdService ) {}
 //Get data while program starts
   ngOnInit():void {
 
