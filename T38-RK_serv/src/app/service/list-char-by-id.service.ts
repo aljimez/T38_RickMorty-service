@@ -15,7 +15,7 @@ export class ListCharByIdService implements OnInit{
   detlChar(id:any){
     console.log(id+" services");
 
-    return this.http.get("https://rickandmortyapi.com/api/character/"+id);
+    return this.http.get("https://rickandmortyapi.com/api/character/{id}");
   }
 
   }
