@@ -11,7 +11,7 @@ const routes: Routes = [
 {path:'about',component:AboutComponent},
 
 {
-  path:'characbyid/:id',component:CharacByIdComponent
+  path:'characbyid',component:CharacByIdComponent
 }];
 
 @NgModule({
