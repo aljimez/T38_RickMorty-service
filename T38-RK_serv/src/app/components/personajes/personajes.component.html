@@ -1,14 +1,12 @@
 <!--Define the format how we show data-->
 <div class="card">
   <div class="card-inside" *ngFor="let p of charac.results">
-    <img [src]="p.image" alt="imagen de personaje" />
+    <img src={{p.image}} alt="imagen de personaje" />
     <div class="card-body">
       <h5 class="card-title">{{ p.name }}</h5>
-      <h5 class="card-body">{{ p.status }}</h5>
-      <h5 class="card-body">{{ p.species }}</h5>
+
       <button
-        class="btn btn-info justify-content-center"
-        (click)="redMre(p.id)"
+        class="btn btn-info justify-content-center" [routerLink]="['/characbyid',p.id]" routerLinkActive="router-link-active"
       >
         Ir
       </button>

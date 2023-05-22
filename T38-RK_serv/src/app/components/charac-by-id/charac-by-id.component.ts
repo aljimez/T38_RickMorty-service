@@ -11,13 +11,13 @@ id: number =0;
 character: any = null;
 
 constructor(private route: ActivatedRoute, private charById:ListCharByIdService,private router: Router){}
+
 //Launches while program starts
   ngOnInit():void {
     this.route.params
       .subscribe(params => {
         console.log(this.id);
-
-        this.charById.retrValu(this.id).subscribe(params => {
+        this.charById.detlChar(this.id).subscribe(params => {
           this.character = params;
         });
       });

@@ -1,14 +1,23 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListCharByIdService {
-//Add HttpClientModule to access the api
+export class ListCharByIdService implements OnInit{
+
   constructor(private http:HttpClient) { }
 
-  retrValu(id:any){
-    return this.http.get("https://rickandmortyapi.com/api/character/"+id)
+  ngOnInit():void {
   }
-}
+
+  //Add HttpClientModule to access the api
+  detlChar(id:any){
+    console.log(id+" services");
+
+    return this.http.get("https://rickandmortyapi.com/api/character/"+id);
+  }
+
+  }
+
+
