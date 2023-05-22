@@ -15,8 +15,7 @@ constructor(private route: ActivatedRoute, private charById:ListCharByIdService,
 //Launches while program starts
   ngOnInit():void {
 
-        console.log(this.id);
-        this.charById.detlChar(this.id);
+
   }
 
   goBack(){

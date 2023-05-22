@@ -6,16 +6,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { CharacByIdComponent } from './components/charac-by-id/charac-by-id.component';
 //Routing paths
 const routes: Routes = [
-  {path:'home',component:HomeComponent},
-{path:'personajes',component:PersonajesComponent},
-{path:'about',component:AboutComponent},
-
-{
-  path:'characbyid',component:CharacByIdComponent
-}];
+  { path: 'home', component: HomeComponent },
+  { path: 'personajes', component: PersonajesComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'characbyid',component: CharacByIdComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

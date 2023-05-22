@@ -5,7 +5,7 @@ import { Injectable, OnInit } from '@angular/core';
   providedIn: 'root'
 })
 export class ListCharByIdService implements OnInit{
-
+id:number =0;
   constructor(private http:HttpClient) { }
 
   ngOnInit():void {
@@ -17,7 +17,7 @@ export class ListCharByIdService implements OnInit{
 
     console.log(id+" services");
 
-    return this.http.get("https://rickandmortyapi.com/api/character/"+id);
+    return this.http.get("https://rickandmortyapi.com/api/character/"+this.id);
   }
 
   }
